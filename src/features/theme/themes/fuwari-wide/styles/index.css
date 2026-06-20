@@ -14,7 +14,9 @@
     --fuwari-content-delay: 150ms;
     --fuwari-hue: 250;
     --fuwari-page-width: 90rem;
-    --fuwari-toc-width: calc((100vw - var(--fuwari-page-width)) / 2 - 1rem);
+    /* Fixed TOC width — fuwari derives this from (100vw - page-width) / 2,
+       which shrinks as page-width grows. Locking it keeps the TOC readable. */
+    --fuwari-toc-width: 16rem;
 
     /* Light mode */
     --fuwari-primary: oklch(0.7 0.14 var(--fuwari-hue));
